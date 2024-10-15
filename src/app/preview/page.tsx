@@ -18,8 +18,6 @@ export default function Home() {
       // setThemeSections(event.data);
     };
     const handleClick = (event: MouseEvent) => {
-      console.log('handleClick');
-      
       let target = event.target as HTMLElement;
       if (target.hasAttribute('data-block')) {
         event.preventDefault();

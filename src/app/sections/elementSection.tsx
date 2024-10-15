@@ -19,26 +19,20 @@ const ElementSection = ({
 }: {
   target: { sectionId: string; path: string[] } | undefined;
 }) => {
-  console.log(target);
 
   const { themeSections, setThemeSections } = useStore((state) => state);
   const section = themeSections.find((section) => {
     return section.id === target?.sectionId;
   });
 
-  console.log(!section, !target, !section || !target);
 
   if (!section || !target)
     return <div>Select an element on the canvas to edit its settings.</div>;
 
   let element: TText | TLink | TImage | TList;
   const targetStr = target.path.join('.');
-  console.log(section);
-  console.log(targetStr);
 
   element = get(section.data, targetStr as DeepKeys<TSection>);
-
-  console.log(element);
   
 
   return (

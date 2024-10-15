@@ -1,6 +1,6 @@
 'use client';
 
-import useStore from '@/app/store';
+import useStore from '@/store';
 import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import Layers from './sections/layers';
 import ElementSection from './sections/elementSection';

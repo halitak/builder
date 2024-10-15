@@ -1,4 +1,4 @@
-import useStore from '@/app/store';
+import useStore from '@/store/index';
 
 const Layers = () => {
   const themeSections = useStore((state) => state.themeSections);
